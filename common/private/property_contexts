@@ -24,3 +24,5 @@ persist.vendor.recovery_update         u:object_r:recovery_update_prop:s0
 
 # xtra-daemon control
 persist.sys.xtra-daemon.enabled        u:object_r:xtra_control_prop:s0 exact bool
+
+vendor.camera.hal1.packagelist              u:object_r:vendor_persist_camera_prop:s0
