@@ -29,6 +29,11 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     hardware/google/pixel-sepolicy/turbo_adapter
 endif
 
+ifneq ($(TARGET_SUPPORTS_GOOGLE_BATTERY), true)
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/custom/sepolicy/common/googlebattery
+endif
+
 # Selectively include legacy rules defined by the products
 -include device/pixys/sepolicy/legacy-common/sepolicy.mk
 
