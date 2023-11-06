@@ -19,3 +19,6 @@ allow platform_app cache_recovery_file:file { create write open getattr setattr 
 set_prop(platform_app, flag_system_prop);
 get_prop(platform_app, flag_system_prop);
 
+# Allow launcher app to read memory info
+r_dir_file(platform_app, config_gz)
+r_dir_file(platform_app, sysfs_zram)
